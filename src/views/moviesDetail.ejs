@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= movie.title %> </title>
+    <link rel='stylesheet' href='/css/style.css' />
+
+</head>
+<body>
+    
+    <%- include('./partials/header') %> 
+    <main class="detalle">
+        <div class="caja_detalle">
+            <h1><%= movie.title %> </h1>    
+            <br>
+            <p>Rating: <%= movie.rating %> </p>
+            <p>Awards: <%= movie.awards %> </p>
+            <p>Length: <%= movie.length + ' min'%> </p>
+            <p>Release Date: <%= movie.release_date %> </p>
+            <div class="caja_Boton">
+                <a class="boton_Return" href="/movies/">Regresar a Peliculas</a>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

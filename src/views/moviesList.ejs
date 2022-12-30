@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado de Películas</title>
+    <link rel='stylesheet' href='/css/style.css' />
+
+</head>
+
+<body>
+    
+    <%- include('./partials/header') %> 
+    <main class="listado">
+        <div class="caja_listado">
+            <h1 class="titulo">Listado de peliculas</h1>
+            <ul>
+                <% for( let i = 0; i < movies.length; i++ ) { %>
+                <li>
+                    <a href="/movies/detail/<%= movies[i].id %>"><%= movies[i].title %></a>
+                </li>
+                <% } %>
+            </ul>
+        
+        </div>
+    </main>
+</body>
+
+</html>
